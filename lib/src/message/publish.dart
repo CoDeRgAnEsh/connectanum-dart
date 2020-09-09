@@ -18,6 +18,7 @@ class Publish extends AbstractMessageWithPayload {
 
 class PublishOptions {
   bool acknowledge;
+  bool retain;
 
   // subscriber_blackwhite_listing == true
   List<int> exclude;
@@ -35,6 +36,7 @@ class PublishOptions {
 
   PublishOptions(
       {this.acknowledge,
+      this.retain,
       this.exclude,
       this.exclude_authid,
       this.exclude_authrole,
